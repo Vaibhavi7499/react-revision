@@ -1,0 +1,11 @@
+.app{
+    display: flex;
+}
+
+.app-sidebar{
+    width: 20%;
+}
+
+.app-hook{
+    width: 80%;
+}

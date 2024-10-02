@@ -1,0 +1,22 @@
+.hook-container{
+background-color: blanchedalmond;
+padding: 20px;
+
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    li{
+        list-style-type: none;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 1.3rem;
+    }
+
+    .active{
+        border-bottom: 2px solid green;
+    }
+}

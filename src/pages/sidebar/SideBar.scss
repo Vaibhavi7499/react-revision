@@ -1,0 +1,33 @@
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin: 15px 0;
+      cursor: pointer;
+
+      a{
+        color: #ecf0f1;
+        text-decoration: none;
+        font-size: 1.3rem;
+      }
+
+      a:hover{
+        color: tomato;
+      }
+    }
+
+    .active{
+        border-bottom: 2px solid #3498db;
+    }
+  }
+}
