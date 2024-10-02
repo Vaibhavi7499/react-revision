@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Child from "./Child";
 import RoomDetails from "./RoomDetails";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Allhooks from "./components/Allhooks/Allhooks";
 import SideBar from "./pages/sidebar/SideBar";
 import HookuseState from "./components/Hookscomp/HookuseState/HookuseState";
@@ -31,6 +31,7 @@ const App = () => {
       </div>
       <div className="app-hook">
         <Routes>
+          <Route path="/" element={<Navigate to="/hooks" />} />
           <Route path="/hooks" element={<Allhooks />} >
           <Route index element={<HookuseState />} />
           <Route path="useEffect" element={<HookuseEffect />} />

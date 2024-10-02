@@ -8,7 +8,7 @@ const Allhooks = () => {
       <div className="hook-container">
         <ul>
           <li>
-            <NavLink to="/hooks">useState</NavLink>
+            <NavLink end to="/hooks">useState</NavLink>
           </li>
           <li>
             <NavLink to="/hooks/useEffect">useEffect</NavLink>
