@@ -11,6 +11,7 @@ import HookuseReducer from "./components/Hookscomp/HookuseReducer/HookuseReducer
 import HookuseMemo from "./components/Hookscomp/HookuseMemo/HookuseMemo";
 import HookuseCallback from "./components/Hookscomp/HookuseCallback/HookuseCallback";
 import HookuseContext from "./components/Hookscomp/HookuseContext/HookuseContext";
+import LifeCycle from "./components/lifecycle/LifeCycle";
 
 const App = () => {
   let [name, setName] = useState("Hello");
@@ -40,6 +41,8 @@ const App = () => {
           <Route path="useCallback" element={<HookuseCallback />} />
           <Route path="useContext" element={<HookuseContext />} />
           </Route>
+
+          <Route path="/lifecycle" element={<LifeCycle/>} />
         </Routes>
       </div>
     </div>

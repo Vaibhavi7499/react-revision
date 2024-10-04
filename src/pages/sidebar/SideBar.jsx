@@ -8,6 +8,7 @@ const SideBar = () => {
             <h2>Sidebar</h2>
             <ul>
                 <li><NavLink to="/hooks">All Hooks</NavLink></li>
+                <li><NavLink to="/lifecycle">Lifecycle</NavLink></li>
             </ul>
     </div>
   )
