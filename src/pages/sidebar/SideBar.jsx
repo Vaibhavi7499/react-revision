@@ -9,6 +9,7 @@ const SideBar = () => {
             <ul>
                 <li><NavLink to="/hooks">All Hooks</NavLink></li>
                 <li><NavLink to="/lifecycle">Lifecycle</NavLink></li>
+                <li><NavLink to="/routing">Routing</NavLink></li>
             </ul>
     </div>
   )

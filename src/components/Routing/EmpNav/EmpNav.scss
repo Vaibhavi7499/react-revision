@@ -1,0 +1,22 @@
+.list-container {
+  ul {
+    display: flex;
+    background-color: antiquewhite;
+    padding: 15px;
+  }
+
+  li {
+    list-style-type: none;
+    margin-right: 50px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 18px;
+
+  }
+
+  .active{
+    border-bottom: 2px solid green;
+  }
+}
