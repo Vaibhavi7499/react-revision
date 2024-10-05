@@ -14,8 +14,8 @@ const EmpForm = () => {
   const form = useForm({
     mode: "onTouched",
     defaultValues: {
-      name: "",
-      email: "",
+      name: "kishor",
+      email: "k@gmail.com",
       phoneNumber: "",
     },
   });

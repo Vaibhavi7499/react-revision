@@ -42,7 +42,7 @@ Navigate("/routing/"+obj?.id)
                 >
                   Delete
                 </button>{" "}
-                <button className="btn btn-secondary">View</button>
+                <button className="btn btn-secondary" onClick={()=>Navigate(`/routing/view/${e?.id}`)}>View</button>
               </td>
             </tr>
           ))}

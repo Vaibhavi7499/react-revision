@@ -15,6 +15,9 @@ import LifeCycle from "./components/lifecycle/LifeCycle";
 import EmpForm from "./components/Routing/EmpForm/EmpForm";
 import EmpList from "./components/Routing/EmpList/EmpList";
 import EmpNav from "./components/Routing/EmpNav/EmpNav";
+import ViewEmp from "./components/Routing/ViewEmp/ViewEmp";
+import Login from "./components/Routing/Login/Login";
+import ProtectedRoute from "./components/Routing/protectedRoute/ProtectedRoute";
 
 const App = () => {
   let [name, setName] = useState("Hello");
@@ -46,11 +49,16 @@ const App = () => {
           </Route>
 
           <Route path="/lifecycle" element={<LifeCycle/>} />
+          <Route element={<ProtectedRoute/>}>
           <Route path="/routing" element={<EmpNav/>} >
           <Route index element={<EmpForm/>} />
           <Route path="/routing/:id" element={<EmpForm/>} />
           <Route path="emplist" element={<EmpList/>} />
+          <Route path="/routing/view/:id" element={<ViewEmp/>} />
           </Route>
+          </Route>
+          <Route path="login" element={<Login/>} />
+
         </Routes>
       </div>
     </div>
