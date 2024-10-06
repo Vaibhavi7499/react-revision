@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./App.css";
 import Child from "./Child";
 import RoomDetails from "./RoomDetails";
@@ -20,9 +20,12 @@ import ViewEmp from "./components/Routing/ViewEmp/ViewEmp";
 import ProtectedRoute from "./components/Routing/protectedRoute/ProtectedRoute";
 import Login from "./components/Login/Login";
 import Profile from "./components/Profile/Profile";
+import { EmpDataContext } from "./context/EmpDataContext";
 
 const App = () => {
   let [name, setName] = useState("Hello");
+  let {isClose} = useContext(EmpDataContext)
+console.log(isClose);
 
   function changeName(name) {
     setName("Hello World!!");
@@ -35,10 +38,10 @@ const App = () => {
       <span>Add</span> 
       </Child> */}
       {/* <RoomDetails/> */}
-      <div className="app-sidebar">
+      <div className={!isClose ? "app-sidebar-five" : "app-sidebar"}>
         <SideBar />
       </div>
-      <div className="app-hook">
+      <div  className={!isClose ? "closeSidebar" : "app-hook"}>
         <Routes>
           <Route path="/" element={<Navigate to="/hooks" />} />
           <Route path="/hooks" element={<Allhooks />} >

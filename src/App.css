@@ -1,11 +1,24 @@
-.app{
+.app {
     display: flex;
 }
 
-.app-sidebar{
+.app-sidebar {
     width: 20%;
+    transition: 0.5s;
 }
 
-.app-hook{
+.app-sidebar-five {
+    width: 5%;
+    transition: 0.8s;
+
+}
+
+.app-hook {
     width: 80%;
+    transition: 0.8s;
+}
+
+.closeSidebar {
+    width: 95%;
+    transition: 0.8s;
 }

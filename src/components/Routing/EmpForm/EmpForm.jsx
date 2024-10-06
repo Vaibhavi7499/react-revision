@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import "./EmpForm.scss";
 
 const EmpForm = () => {
-  let { getEmpData, empData } = useContext(EmpDataContext);
+  let { getEmpData, empData, updateEmp } = useContext(EmpDataContext);
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -24,9 +24,8 @@ const EmpForm = () => {
   const { errors, isValid, touchedFields, isSubmitted } = formState;
   const { name, email, phoneNumber } = errors;
 
-  console.log(touchedFields, isValid, isSubmitted, errors);
 
-  function updateEmp() {
+  function update() {
     let obj = empData.find((e) => {
       return e?.id === id;
     });
@@ -35,24 +34,36 @@ const EmpForm = () => {
     setValue("phoneNumber", obj?.phoneNumber);
   }
 
-  useEffect(() => {
-    setFocus("name");
-  }, [setFocus]);
+  // useEffect(() => {
+  //   setFocus("name");
+  // }, [setFocus]);
 
   useEffect(() => {
-    updateEmp();
+    update();
   }, [id]);
 
   let EmpFormData = (data) => {
-    let newData = {
-      ...data,
-      id: uuidv4(),
-    };
-    getEmpData(newData);
-    toast("Employee added successfully");
-    setTimeout(() => {
-      navigate("/routing/emplist");
-    }, 700);
+    if (id) {
+      let updateObj = {
+        id,
+        ...data,
+      };
+      updateEmp(updateObj);
+      toast("Employee updated successfully");
+      setTimeout(() => {
+        navigate("/routing/emplist");
+      }, 700);
+    } else {
+      let newData = {
+        ...data,
+        id: uuidv4(),
+      };
+      getEmpData(newData);
+      toast("Employee added successfully");
+      setTimeout(() => {
+        navigate("/routing/emplist");
+      }, 700);
+    }
   };
 
   return (
