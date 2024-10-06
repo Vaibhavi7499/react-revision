@@ -16,8 +16,10 @@ import EmpForm from "./components/Routing/EmpForm/EmpForm";
 import EmpList from "./components/Routing/EmpList/EmpList";
 import EmpNav from "./components/Routing/EmpNav/EmpNav";
 import ViewEmp from "./components/Routing/ViewEmp/ViewEmp";
-import Login from "./components/Routing/Login/Login";
+
 import ProtectedRoute from "./components/Routing/protectedRoute/ProtectedRoute";
+import Login from "./components/Login/Login";
+import Profile from "./components/Profile/Profile";
 
 const App = () => {
   let [name, setName] = useState("Hello");
@@ -58,6 +60,7 @@ const App = () => {
           </Route>
           </Route>
           <Route path="login" element={<Login/>} />
+          <Route path="profile" element={<Profile/>} />
 
         </Routes>
       </div>
