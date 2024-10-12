@@ -34,9 +34,9 @@ const EmpForm = () => {
     setValue("phoneNumber", obj?.phoneNumber);
   }
 
-  // useEffect(() => {
-  //   setFocus("name");
-  // }, [setFocus]);
+  useEffect(() => {
+    setFocus("name");
+  }, [setFocus]);
 
   useEffect(() => {
     update();

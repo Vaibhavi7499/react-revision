@@ -21,6 +21,7 @@ import ProtectedRoute from "./components/Routing/protectedRoute/ProtectedRoute";
 import Login from "./components/Login/Login";
 import Profile from "./components/Profile/Profile";
 import { EmpDataContext } from "./context/EmpDataContext";
+import HOC from "./components/HOC/HOC";
 
 const App = () => {
   let [name, setName] = useState("Hello");
@@ -64,6 +65,7 @@ console.log(isClose);
           </Route>
           <Route path="login" element={<Login/>} />
           <Route path="profile" element={<Profile/>} />
+          <Route path="hoc" element={<HOC/>} />
 
         </Routes>
       </div>
