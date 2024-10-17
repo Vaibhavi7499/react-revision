@@ -22,6 +22,7 @@ import Login from "./components/Login/Login";
 import Profile from "./components/Profile/Profile";
 import { EmpDataContext } from "./context/EmpDataContext";
 import HOC from "./components/HOC/HOC";
+import Watch from "./components/Watch/Watch";
 
 const App = () => {
   let [name, setName] = useState("Hello");
@@ -66,6 +67,7 @@ console.log(isClose);
           <Route path="login" element={<Login/>} />
           <Route path="profile" element={<Profile/>} />
           <Route path="hoc" element={<HOC/>} />
+          <Route path="watch" element={<Watch/>} />
 
         </Routes>
       </div>

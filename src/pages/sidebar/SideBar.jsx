@@ -75,6 +75,9 @@ const SideBar = () => {
           <li>
             <NavLink to="/hoc">HOC</NavLink>
           </li>
+          <li>
+            <NavLink to="/watch">Digital Watch</NavLink>
+          </li>
         </ul>
       </div>
       <ul className={arrow ? "siderbar-none" : ""}>
