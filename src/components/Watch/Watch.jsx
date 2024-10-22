@@ -40,7 +40,7 @@ const Watch = () => {
         <div className="head-container">
           <h2>{dateObj?.hour} : </h2>
           <h2>{dateObj?.minute} : </h2>
-          <h2>{dateObj?.second} </h2>
+          <h2>{dateObj?.second}</h2>
           <h2>{dateObj?.ampm}</h2>
         </div>
       </div>
