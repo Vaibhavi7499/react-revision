@@ -76,6 +76,9 @@ const SideBar = () => {
             <NavLink to="/hoc">HOC</NavLink>
           </li>
           <li>
+            <NavLink to="/pure">Pure Component</NavLink>
+          </li>
+          <li>
             <NavLink to="/watch">Digital Watch</NavLink>
           </li>
         </ul>
