@@ -25,6 +25,9 @@ const Allhooks = () => {
           <li>
             <NavLink to="/hooks/useContext">useContext</NavLink>
           </li>
+          <li>
+            <NavLink to="/hooks/useref">useRef</NavLink>
+          </li>
         </ul>
       </div>
       <Outlet />

@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { memo } from "react";
 
-const PureFunChildComp = () => {
+const PureFunChildComp = (props) => {
+  console.log("child called")
   return (
-    <div>PureFunChildComp</div>
-  )
-}
+    <div>
+      <h3>PureFunChildComp Name : {props.name} </h3>
+    </div>
+  );
+};
 
-export default PureFunChildComp
+export default memo(PureFunChildComp);

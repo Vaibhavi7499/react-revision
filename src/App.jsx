@@ -24,6 +24,7 @@ import { EmpDataContext } from "./context/EmpDataContext";
 import HOC from "./components/HOC/HOC";
 import Watch from "./components/Watch/Watch";
 import PureComp from "./components/PureComp/PureComp";
+import HookuseRef from "./components/Hookscomp/HookuseRef/HookuseRef";
 
 const App = () => {
   let [name, setName] = useState("Hello");
@@ -54,6 +55,7 @@ console.log(isClose);
           <Route path="useMemo" element={<HookuseMemo />} />
           <Route path="useCallback" element={<HookuseCallback />} />
           <Route path="useContext" element={<HookuseContext />} />
+          <Route path="useref" element={<HookuseRef />} />
           </Route>
 
           <Route path="/lifecycle" element={<LifeCycle/>} />

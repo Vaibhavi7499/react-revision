@@ -35,38 +35,38 @@ const Profile = () => {
       {loading ? (
         <div>
           <div
-            class="card m-auto"
+            className="card m-auto"
             aria-hidden="true"
             style={{ width: "18rem" }}
           >
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title placeholder-glow">
-                <span class="placeholder col-6"></span>
+            <img src="..." className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title placeholder-glow">
+                <span className="placeholder col-6"></span>
               </h5>
-              <p class="card-text placeholder-glow">
-                <span class="placeholder col-7"></span>
-                <span class="placeholder col-4"></span>
-                <span class="placeholder col-4"></span>
-                <span class="placeholder col-6"></span>
-                <span class="placeholder col-8"></span>
+              <p className="card-text placeholder-glow">
+                <span className="placeholder col-7"></span>
+                <span className="placeholder col-4"></span>
+                <span className="placeholder col-4"></span>
+                <span className="placeholder col-6"></span>
+                <span className="placeholder col-8"></span>
               </p>
               <a
                 href="#"
                 tabindex="-1"
-                class="btn btn-primary disabled placeholder col-6"
+                className="btn btn-primary disabled placeholder col-6"
               ></a>
             </div>
           </div>
         </div>
       ) : (
         <div>
-          <div class="card m-auto mt-5" style={{ width: "18rem" }}>
-            <img src={profile?.avatar} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">{profile?.email}</h5>
-              <p class="card-text">{profile?.name}</p>
-              <Link href="#" class="btn btn-primary" to="/routing">
+          <div className="card m-auto mt-5" style={{ width: "18rem" }}>
+            <img src={profile?.avatar} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">{profile?.email}</h5>
+              <p className="card-text">{profile?.name}</p>
+              <Link href="#" className="btn btn-primary" to="/routing">
                 Go somewhere
               </Link>
             </div>
