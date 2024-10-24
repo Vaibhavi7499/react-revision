@@ -25,6 +25,7 @@ import HOC from "./components/HOC/HOC";
 import Watch from "./components/Watch/Watch";
 import PureComp from "./components/PureComp/PureComp";
 import HookuseRef from "./components/Hookscomp/HookuseRef/HookuseRef";
+import Todo from "./components/Todo/Todo";
 
 const App = () => {
   let [name, setName] = useState("Hello");
@@ -72,6 +73,7 @@ console.log(isClose);
           <Route path="hoc" element={<HOC/>} />
           <Route path="pure" element={<PureComp/>} />
           <Route path="watch" element={<Watch/>} />
+          <Route path="/redux" element={<Todo/>} />
 
         </Routes>
       </div>
