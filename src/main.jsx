@@ -7,8 +7,10 @@ import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import GlobalContainer from "./context/GlobalContext.jsx";
 import EmpContainer from "./context/EmpDataContext.jsx";
-import { ToastContainer } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Provider } from "react-redux";
+import TodoStore from "./store/TodoStore.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,8 +18,10 @@ createRoot(document.getElementById("root")).render(
       <BrowserRouter>
         <GlobalContainer>
           <EmpContainer>
-          <ToastContainer autoClose={2000} />
-            <App />
+            <ToastContainer autoClose={2000} />
+            <Provider store={TodoStore}>
+              <App />
+            </Provider>
           </EmpContainer>
         </GlobalContainer>
       </BrowserRouter>
