@@ -10,7 +10,7 @@ import EmpContainer from "./context/EmpDataContext.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Provider } from "react-redux";
-import TodoStore from "./store/TodoStore.jsx";
+import TodoStore from "./Store/TodoStore.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,7 +19,7 @@ createRoot(document.getElementById("root")).render(
         <GlobalContainer>
           <EmpContainer>
             <ToastContainer autoClose={2000} />
-            <Provider store={TodoStore}>
+            <Provider store={TodoStore} >
               <App />
             </Provider>
           </EmpContainer>
