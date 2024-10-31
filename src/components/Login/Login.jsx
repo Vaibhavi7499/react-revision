@@ -3,9 +3,10 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import CModel from "../Portal/CModel";
 
 const Login = () => {
-   let navigate =  useNavigate()
+  let navigate = useNavigate();
   let {
     register,
     handleSubmit,
@@ -28,8 +29,7 @@ const Login = () => {
       .then((r) => {
         sessionStorage.setItem("token", r?.data?.access_token);
         toast.success("Login Successfully");
-        navigate("/routing")
-
+        navigate("/routing");
       })
       .catch((err) => {
         console.warn(err);
@@ -39,6 +39,7 @@ const Login = () => {
 
   return (
     <div className="col-md-6 m-auto shadow p-3 mb-5 bg-body rounded mt-5">
+      <CModel />
       <h1 className="text-center">Login Form</h1>
       <form onSubmit={handleSubmit(LoginEmp)}>
         <div className="mb-3">

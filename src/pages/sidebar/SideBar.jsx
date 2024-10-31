@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import avatar from "../../assets/images/avatar.png";
 import { EmpDataContext } from "../../context/EmpDataContext";
 
+
 const SideBar = () => {
   let {setIsClose} =  useContext(EmpDataContext)
   let token = sessionStorage.getItem("token");
@@ -33,6 +34,7 @@ const SideBar = () => {
   };
   return (
     <div className={arrow ? "sidebar-five" :"sidebar"}>
+   
       <div>
         <div className="d-flex align-items-center justify-content-between">
           <h2 className={arrow ? "siderbar-none" : ""}>Sidebar</h2>
