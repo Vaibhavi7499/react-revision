@@ -6,18 +6,19 @@ import { add_todo } from "../../Slice/TodoSlice";
 const Todo = () => {
   let dispatch = useDispatch();
   let todolist = useSelector((state)=>state.todo)
-let [todo,setTodo] = useState("");
-  let addTodo=()=>{
-dispatch(add_todo(todo))
-  }
 
+let [Inptvalue,setInptValue] = useState("");
+
+  let addTodo=()=>{
+dispatch(add_todo(Inptvalue))
+  }
   return (
     <div className="todo-container col-md-6 m-auto mt-5">
       <div className="btn-container">
         <h2>Todo List</h2>
         <div>
           <label>Enter todo : </label>
-          <input type="text" value={todo} onChange={(e)=>setTodo(e.target.value)}/>
+          <input type="text" value={Inptvalue} onChange={(e)=>setInptValue(e.target.value)}/>
         </div>
         <div>
           <button className="btn btn-dark " onClick={addTodo}>Add Todo</button>
