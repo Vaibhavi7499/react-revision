@@ -10,7 +10,7 @@ import EmpContainer from "./context/EmpDataContext.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Provider } from "react-redux";
-import TodoStore from "./Store/TodoStore.js";
+import TodoStore from "./Store/TodoStore";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
